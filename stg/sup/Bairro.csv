@@ -1,0 +1,165 @@
+área,nome,codbairro,codra,cod_rp,nome_normalized
+1705684.50390625,Paquetá                   ,13,21,1.1,PAQUETA
+4056402.76611328,Freguesia (Ilha)          ,98,20,3.7,FREGUESIA
+978046.54248047,Bancários                 ,97,20,3.7,BANCARIOS
+18957422.1518555,Galeão                    ,104,20,3.7,GALEAO
+1672545.75097656,Tauá                      ,101,20,3.7,TAUA
+1186409.43945313,Portuguesa                ,103,20,3.7,PORTUGUESA
+520557.46679688,Moneró                    ,102,20,3.7,MONERO
+3385308.03125,Vigário Geral             ,48,31,3.5,VIGARIO GERAL
+490102.43017578,Cocotá                    ,96,20,3.7,COCOTA
+1973968.44726563,Jardim América            ,49,31,3.5,JARDIM AMERICA
+1621126.18847656,Jardim Carioca            ,100,20,3.7,JARDIM CARIOCA
+8311405.5546875,Pavuna                    ,114,25,3.6,PAVUNA
+3856801.06689453,Cordovil                  ,46,31,3.5,CORDOVIL
+3205882.07080078,Jardim Guanabara          ,99,20,3.7,JARDIM GUANABARA
+2197968.69482422,Parada de Lucas           ,47,31,3.5,PARADA DE LUCAS
+1517134.46630859,Parque Colúmbia           ,159,25,3.6,PARQUE COLUMBIA
+379405.89892578,Praia da Bandeira         ,95,20,3.7,PRAIA DA BANDEIRA
+4623381.89599609,Penha Circular            ,44,11,3.5,PENHA CIRCULAR
+2068686.08105469,Cacuia                    ,93,20,3.7,CACUIA
+7477839.76953125,Irajá                     ,76,14,3.3,IRAJA
+4345726.97900391,Anchieta                  ,107,22,3.6,ANCHIETA
+1605524.3203125,Acari                     ,111,25,3.6,ACARI
+604129.77490234,Pitangueiras              ,94,20,3.7,PITANGUEIRAS
+1814831.70556641,Costa Barros              ,113,25,3.6,COSTA BARROS
+3522221.85253906,Brás de Pina              ,45,11,3.5,BRAS DE PINA
+5811323.13867188,Penha                     ,43,11,3.5,PENHA
+161117.78417969,Zumbi                     ,92,20,3.7,ZUMBI
+861924.82275391,Ribeira                   ,91,20,3.7,RIBEIRA
+2511970.33837891,Coelho Neto               ,110,25,3.6,COELHO NETO
+3820007.67333984,Guadalupe                 ,106,22,3.6,GUADALUPE
+3905790.00732422,Parque Anchieta           ,108,22,3.6,PARQUE ANCHIETA
+1723864.33349609,Barros Filho              ,112,25,3.6,BARROS FILHO
+515209.05175781,Vista Alegre              ,75,14,3.3,VISTA ALEGRE
+2116869.79931641,Ricardo de Albuquerque    ,109,22,3.6,RICARDO DE ALBUQUERQUE
+2261110.26855469,Colégio                   ,77,14,3.3,COLEGIO
+1374847.05664063,Honório Gurgel            ,87,15,3.3,HONORIO GURGEL
+3689833.24707031,Olaria                    ,42,10,3.1,OLARIA
+1435715.75537109,Vila da Penha             ,74,14,3.3,VILA DA PENHA
+4268761.30273438,Maré                      ,157,30,3.1,MARE
+10756709.4238281,Vila Militar              ,135,33,5.1,VILA MILITAR
+4690706.46972656,Cidade Universitária      ,105,20,3.7,CIDADE UNIVERSITARIA
+2886705.52392578,Rocha Miranda             ,86,15,3.3,ROCHA MIRANDA
+2793533.0,Ramos                     ,41,10,3.1,RAMOS
+26054198.0688477,Realengo                  ,139,33,5.1,REALENGO
+1519254.12988281,Vila Kosmos               ,72,14,3.3,VILA KOSMOS
+3886225.66064453,Marechal Hermes           ,90,15,3.3,MARECHAL HERMES
+1835710.64990234,Vicente de Carvalho       ,73,14,3.3,VICENTE DE CARVALHO
+27417970.8330078,Paciência                 ,148,19,5.3,PACIENCIA
+2225644.96826172,Engenho da Rainha         ,55,12,3.4,ENGENHO DA RAINHA
+2960855.18457031,Complexo do Alemão        ,156,29,3.4,COMPLEXO DO ALEMAO
+1101220.96240234,Vaz Lobo                  ,84,15,3.3,VAZ LOBO
+4865791.84277344,Padre Miguel              ,140,17,5.1,PADRE MIGUEL
+3037846.62695313,Bento Ribeiro             ,89,15,3.3,BENTO RIBEIRO
+1255809.62109375,Turiaçú                   ,85,15,3.3,TURIACU
+2199716.17089844,Bonsucesso                ,40,10,3.1,BONSUCESSO
+3485274.29931641,Inhaúma                   ,54,12,3.4,INHAUMA
+1747526.48583984,Tomás Coelho              ,56,12,3.4,TOMAS COELHO
+8319614.02734375,Santíssimo                ,143,18,5.2,SANTISSIMO
+3787613.32128906,Madureira                 ,83,15,3.3,MADUREIRA
+2071126.77880859,Osvaldo Cruz              ,88,15,3.3,OSVALDO CRUZ
+125044295.352051,Santa Cruz                ,149,19,5.3,SANTA CRUZ
+1975949.31054688,Magalhães Bastos          ,138,33,5.1,MAGALHAES BASTOS
+16908604.956543,Senador Camará            ,142,17,5.1,SENADOR CAMARA
+1924149.28466797,Cavalcanti                ,80,15,3.3,CAVALCANTI
+3252292.92871094,Campo dos Afonsos         ,136,33,5.1,CAMPO DOS AFONSOS
+1157472.79248047,Higienópolis              ,50,12,3.4,HIGIENOPOLIS
+2618351.22753906,Manguinhos                ,39,10,3.1,MANGUINHOS
+708274.3046875,Engenheiro Leal           ,81,15,3.3,ENGENHEIRO LEAL
+1836420.02978516,Pilares                   ,71,13,3.2,PILARES
+1440914.46484375,Del Castilho              ,53,12,3.4,DEL CASTILHO
+3887100.34375,Piedade                   ,69,13,3.2,PIEDADE
+2838970.70166016,Cascadura                 ,82,15,3.3,CASCADURA
+4232214.78710938,Vila Valqueire            ,125,16,4.1,VILA VALQUEIRE
+824989.74072266,Maria da Graça            ,52,12,3.4,MARIA DA GRACA
+4323794.68115234,Quintino Bocaiúva         ,79,15,3.3,QUINTINO BOCAIUVA
+7869204.28027344,Jardim Sulacap            ,137,33,5.1,JARDIM SULACAP
+984510.43115234,Campinho                  ,78,15,3.3,CAMPINHO
+616332.65332031,Abolição                  ,70,13,3.2,ABOLICAO
+6441769.125,Senador Vasconcelos       ,145,18,5.2,SENADOR VASCONCELOS
+11261318.8930664,Cosmos                    ,147,18,5.2,COSMOS
+943874.10644531,Jacarezinho               ,155,28,3.2,JACAREZINHO
+2250159.74560547,Cachambi                  ,65,13,3.2,CACHAMBI
+6499977.50927734,Praça Seca                ,124,16,4.1,PRACA SECA
+1736412.80761719,Benfica                   ,12,7,1.1,BENFICA
+3920440.57421875,Engenho de Dentro         ,66,13,3.2,ENGENHO DE DENTRO
+4105643.88916016,São Cristóvão             ,10,7,1.1,SAO CRISTOVAO
+863074.53808594,Vasco da Gama             ,158,7,1.1,VASCO DA GAMA
+8287883.10449219,Inhoaíba                  ,146,18,5.2,INHOAIBA
+1012635.96728516,Todos os Santos           ,64,13,3.2,TODOS OS SANTOS
+842565.64208984,Jacaré                    ,51,13,3.2,JACARE
+1060146.17480469,Encantado                 ,68,13,3.2,ENCANTADO
+1311625.60009766,Rocha                     ,58,13,3.2,ROCHA
+2470933.15234375,Méier                     ,63,13,3.2,MEIER
+1112902.74121094,Gamboa                    ,2,1,1.1,GAMBOA
+1684720.66113281,Santo Cristo              ,3,1,1.1,SANTO CRISTO
+5424739.1953125,Centro                    ,5,2,1.1,CENTRO
+884408.47705078,Sampaio                   ,60,13,3.2,SAMPAIO
+928108.49707031,Riachuelo                 ,59,13,3.2,RIACHUELO
+363817.62255859,Saúde                     ,1,1,1.1,SAUDE
+648907.60009766,São Francisco Xavier      ,57,13,3.2,SAO FRANCISCO XAVIER
+2644847.10009766,Engenho Novo              ,61,13,3.2,ENGENHO NOVO
+798128.92089844,Mangueira                 ,11,7,1.1,MANGUEIRA
+5567990.09863281,Tanque                    ,123,16,4.1,TANQUE
+13206630.0966797,Taquara                   ,122,16,4.1,TAQUARA
+2426231.83935547,Água Santa                ,67,13,3.2,AGUA SANTA
+2669197.55273438,Lins de Vasconcelos       ,62,13,3.2,LINS DE VASCONCELOS
+10328406.1118164,Freguesia (Jacarepaguá)   ,120,16,4.1,FREGUESIA JACAREPAGUA
+934852.88378906,Cidade Nova               ,8,3,1.1,CIDADE NOVA
+719909.69824219,Praça da Bandeira         ,32,8,2.2,PRACA DA BANDEIRA
+3217125.90039063,Vila Isabel               ,36,9,2.2,VILA ISABEL
+1667302.203125,Maracanã                  ,35,9,2.2,MARACANA
+1140065.48193359,Glória                    ,16,4,2.1,GLORIA
+3342510.64160156,Rio Comprido              ,7,3,1.1,RIO COMPRIDO
+5157128.51367188,Santa Teresa              ,14,23,1.1,SANTA TERESA
+980400.66503906,Estácio                   ,9,3,1.1,ESTACIO
+10065558.4926758,Tijuca                    ,33,8,2.2,TIJUCA
+539458.44189453,Catumbi                   ,6,3,1.1,CATUMBI
+5739104.51953125,Grajaú                    ,38,9,2.2,GRAJAU
+2830915.62158203,Pechincha                 ,121,16,4.1,PECHINCHA
+2261300.484375,Andaraí                   ,37,9,2.2,ANDARAI
+681026.73291016,Catete                    ,18,4,2.1,CATETE
+1646253.58740234,Flamengo                  ,15,4,2.1,FLAMENGO
+2493507.37158203,Laranjeiras               ,17,4,2.1,LARANJEIRAS
+131786592.992188,Guaratiba                 ,151,26,5.4,GUARATIBA
+39380382.5219727,Vargem Grande             ,131,24,4.2,VARGEM GRANDE
+31495676.0087891,Alto da Boa Vista         ,34,8,2.2,ALTO DA BOA VISTA
+892540.06591797,Cosme Velho               ,19,4,2.1,COSME VELHO
+3339565.57861328,Curicica                  ,119,16,4.1,CURICICA
+4798955.83154297,Botafogo                  ,20,4,2.1,BOTAFOGO
+2319001.83740234,Urca                      ,22,4,2.1,URCA
+1273024.81640625,Cidade de Deus            ,118,34,4.1,CIDADE DE DEUS
+11621300.0146484,Sepetiba                  ,150,19,5.3,SEPETIBA
+3500410.67089844,Anil                      ,116,16,4.1,ANIL
+75796482.3310547,Jacarepaguá               ,115,16,4.1,JACAREPAGUA
+8859905.68505859,Camorim                   ,129,24,4.2,CAMORIM
+1054475.31884766,Humaitá                   ,21,4,2.1,HUMAITA
+1236291.52294922,Gardênia Azul             ,117,16,4.1,GARDENIA AZUL
+2689203.73388672,Jardim Botânico           ,28,6,2.1,JARDIM BOTANICO
+14438294.6982422,Vargem Pequena            ,130,24,4.2,VARGEM PEQUENA
+4100850.171875,Copacabana                ,24,5,2.1,COPACABANA
+977199.05126953,Leme                      ,23,5,2.1,LEME
+5109893.28710938,Lagoa                     ,27,6,2.1,LAGOA
+13197726.2036133,Itanhangá                 ,127,24,4.2,ITANHANGA
+2579636.59130859,Gávea                     ,29,6,2.1,GAVEA
+48150630.065918,Barra da Tijuca           ,128,24,4.2,BARRA DA TIJUCA
+2153095.9453125,Leblon                    ,26,6,2.1,LEBLON
+3084907.22021484,Ipanema                   ,25,6,2.1,IPANEMA
+6488565.79443359,São Conrado               ,31,6,2.1,SAO CONRADO
+1437194.75585938,Rocinha                   ,154,27,2.1,ROCINHA
+3636912.25195313,Pedra de Guaratiba        ,153,26,5.4,PEDRA DE GUARATIBA
+30655624.2368164,Recreio dos Bandeirantes  ,132,24,4.2,RECREIO DOS BANDEIRANTES
+1621377.86816406,Vidigal                   ,30,6,2.1,VIDIGAL
+1689691.29736328,Joá                       ,126,24,4.2,JOA
+9442030.42529297,Barra de Guaratiba        ,152,26,5.4,BARRA DE GUARATIBA
+9598826.27539063,Grumari                   ,133,24,4.2,GRUMARI
+5347480.57666016,Caju                      ,4,1,1.1,CAJU
+4640511.10009766,Deodoro                   ,134,33,5.1,DEODORO
+298325.82470703,Lapa,161,2,1.1,LAPA
+104445147.6875,Campo Grande,144,18,5.2,CAMPO GRANDE
+35966196.7001953,Bangu,141,17,5.1,BANGU
+2534304.16845703,Gericinó,160,17,5.1,GERICINO
+327327.08300781,Jabour,163,17,5.1,JABOUR
+1473737.29589844,Vila Kennedy,162,17,5.1,VILA KENNEDY
+7714616.09516844,Ilha de Guaratiba,164,26,5.4,ILHA DE GUARATIBA
