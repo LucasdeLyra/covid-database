@@ -22,7 +22,7 @@ Para executar o projeto você precisará ter instaladas as seguintes ferramentas
 
 ### Ferramentas
 - [Python3](https://www.python.org/downloads/)
-- [MySQL] (https://www.mysql.com/)
+- [MySQL](https://www.mysql.com/)
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
 
@@ -38,7 +38,7 @@ Para executar o projeto você precisará ter instaladas as seguintes ferramentas
    - Instalação dos pacotes
 
       ```bash
-      python 
+      pip install -r requirements.txt
       ```
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
