@@ -21,10 +21,7 @@
 Para executar o projeto você precisará ter instaladas as seguintes ferramentas:
 
 ### Ferramentas
-- [Node.js](https://nodejs.org/en/)
-
-### Versões das Ferramentas
-- Node.js (v18.12.1 LTS)
+- [Python3](https://www.python.org/downloads/)
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
 
