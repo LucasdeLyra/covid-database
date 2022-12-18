@@ -22,6 +22,7 @@ Para executar o projeto você precisará ter instaladas as seguintes ferramentas
 
 ### Ferramentas
 - [Python3](https://www.python.org/downloads/)
+- [MySQL] (https://www.mysql.com/)
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
 
@@ -37,7 +38,7 @@ Para executar o projeto você precisará ter instaladas as seguintes ferramentas
    - Instalação dos pacotes
 
       ```bash
-      npm i
+      python 
       ```
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
@@ -46,7 +47,7 @@ Para executar o projeto você precisará ter instaladas as seguintes ferramentas
 - No diretório raiz do projeto, utilizar o comando a seguir:
 
    ```bash
-   npm run dev
+   python main.py
    ```
 
 <p align="right"><a href="#top">Voltar ao topo</a></p>
