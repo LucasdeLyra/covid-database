@@ -1,5 +1,3 @@
-import pandas as pd
-import os
 import utils.utils as utils
 
 database, cursor = utils.create_cursor()
@@ -30,9 +28,9 @@ utils.create_table(r'stg\sup\CEP_dos_casos_confirmados_de_COVID-19_no_município
 
 #Cria tabela Regiao_Administrativa e salva no diretório local
 utils.create_table(r'stg\sup\Limite_de_Bairros.csv',
-    'CREATE TABLE Regiao_Administrativa(codra INTEGER PRIMARY KEY, regiao_adm VARCHAR(32))',
+    'CREATE TABLE Regiao_Administrativa(fk_Regiao_Administrativa_codra INTEGER PRIMARY KEY, regiao_adm VARCHAR(32))',
     ['codra', 'regiao_adm'],
-    'INSERT INTO refined.Regiao_Administrativa (regiao_adm, codra) VALUES (%s, %s)',
+    'INSERT INTO refined.Regiao_Administrativa (regiao_adm, fk_Regiao_Administrativa_codra) VALUES (%s, %s)',
     'refined',
     True,
     r'ref\RegiaoAdministrativa.csv',
@@ -41,9 +39,9 @@ utils.create_table(r'stg\sup\Limite_de_Bairros.csv',
 
 #Cria tabela Regiao_de_Planejamento e salva no diretório local
 utils.create_table(r'stg\sup\Limite_de_Bairros.csv',
-    'CREATE TABLE Regiao_de_Planejamento(cod_rp VARCHAR(3) PRIMARY KEY, rp VARCHAR(32))',
+    'CREATE TABLE Regiao_de_Planejamento(fk_Regiao_de_Planejamento_cod_rp VARCHAR(3) PRIMARY KEY, rp VARCHAR(32))',
     ['cod_rp', 'rp'],
-    'INSERT INTO refined.Regiao_de_Planejamento (rp, cod_rp) VALUES (%s, %s)',
+    'INSERT INTO refined.Regiao_de_Planejamento (rp, fk_Regiao_de_Planejamento_cod_rp) VALUES (%s, %s)',
     'refined',
     True,
     r'ref\RegiaoDePlanejamento.csv',
@@ -52,7 +50,7 @@ utils.create_table(r'stg\sup\Limite_de_Bairros.csv',
 
 #Não tem a menor necessidade de ter feito isso, poderia ter sido com a util.create_table também que seria até mais fácil
 #Cria tabela bairro
-cursor.execute('CREATE TABLE bairro AS SELECT codbairro, nome, area, codra, cod_rp, COALESCE(bolsa_familia_sim, 0) AS bolsa_familia_sim, COALESCE(bolsa_familia_nao, 0) AS bolsa_familia_nao, COALESCE(faixa_renda_acima_1_5, 0) AS faixa_renda_acima_1_5, COALESCE(faixa_renda_baixa_renda, 0) AS faixa_renda_baixa_renda, COALESCE(faixa_renda_extrema_pobreza, 0) AS faixa_renda_extrema_pobreza, COALESCE(faixa_renda_pobreza, 0) AS faixa_renda_pobreza, COALESCE(extrema_pobreza_cadastrado, 0) AS extrema_pobreza_cadastrado, COALESCE(extrema_pobreza_sem_registro, 0) AS extrema_pobreza_sem_registro \
+cursor.execute('CREATE TABLE bairro AS SELECT fk_Bairro_codbairro, nome, area, fk_Regiao_Administrativa_codra, fk_Regiao_de_Planejamento_cod_rp, COALESCE(bolsa_familia_sim, 0) AS bolsa_familia_sim, COALESCE(bolsa_familia_nao, 0) AS bolsa_familia_nao, COALESCE(faixa_renda_acima_1_5, 0) AS faixa_renda_acima_1_5, COALESCE(faixa_renda_baixa_renda, 0) AS faixa_renda_baixa_renda, COALESCE(faixa_renda_extrema_pobreza, 0) AS faixa_renda_extrema_pobreza, COALESCE(faixa_renda_pobreza, 0) AS faixa_renda_pobreza, COALESCE(extrema_pobreza_cadastrado, 0) AS extrema_pobreza_cadastrado, COALESCE(extrema_pobreza_sem_registro, 0) AS extrema_pobreza_sem_registro \
     FROM staging.stg_bairro AS bairro \
     left JOIN staging.stg_bolsa_familia \
     ON bairro.nome_normalized = staging.stg_bolsa_familia.localidade \
@@ -63,56 +61,24 @@ cursor.execute('CREATE TABLE bairro AS SELECT codbairro, nome, area, codra, cod_
 database.commit()
 
 #Cria tabela Unidade_de_Saude
-cursor.execute('CREATE TABLE Unidades_de_Saude AS SELECT CNES, equipes, codbairro, staging.stg_unidades_de_saude.nome, endereco \
+cursor.execute('CREATE TABLE Unidades_de_Saude AS SELECT CNES, equipes, fk_Bairro_codbairro, staging.stg_unidades_de_saude.nome, endereco \
     FROM staging.stg_bairro \
     RIGHT JOIN staging.stg_unidades_de_saude \
     ON staging.stg_bairro.nome_normalized = staging.stg_unidades_de_saude.bairro;')
 database.commit()
 
-#Cria tabela Casos_de_COVID
-cursor.execute('CREATE TABLE Casos_de_COVID AS SELECT staging.stg_casos_de_covid.ID, dt_notific, dt_inicio_sintomas, dt_evolucao, refined.evolucao.ID AS evolucao_ID FROM staging.stg_casos_de_covid \
+#Cria tabela Caso_de_COVID
+cursor.execute('CREATE TABLE Caso_de_COVID AS SELECT staging.stg_casos_de_covid.ID, dt_notific, dt_inicio_sintomas, dt_evolucao, refined.evolucao.ID AS fk_Evolucao_ID FROM staging.stg_casos_de_covid \
     JOIN refined.evolucao \
     ON refined.evolucao.evolucao = stg_casos_de_covid.evolucao;')
 database.commit()
 
 #Cria tabela Reside_Bairro_Caso_de_COVID_CEP
-cursor.execute('CREATE TABLE Resida_Bairro_Caso_de_COVID_CEP AS SELECT codbairro AS fk_Bairro_codbairro, refined.cep.ID AS fk_CEP_ID, staging.stg_casos_de_covid.ID AS fk_Caso_de_COVID_ID FROM staging.stg_casos_de_covid \
+cursor.execute('CREATE TABLE Resida_Bairro_Caso_de_COVID_CEP AS SELECT fk_Bairro_codbairro, refined.cep.ID AS fk_CEP_ID, staging.stg_casos_de_covid.ID AS fk_Caso_de_COVID_ID FROM staging.stg_casos_de_covid \
     LEFT JOIN refined.cep \
     ON refined.cep.cep = staging.stg_casos_de_covid.cep \
     LEFT JOIN staging.stg_bairro \
     ON staging.stg_bairro.nome_normalized = staging.stg_casos_de_covid.bairro;')
 database.commit()
 
-#Para executar o comando abaixo é necessário que altere o campo secure_file_priv my.ini de seu MySQL
-#ache o local onde está sua secure_file_priv através de @@GLOBAL.secure_file_priv
-
-#Salva a tabela bairro no diretório local
-cursor.execute(fr"SELECT * FROM refined.bairro INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\bairro.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\bairro.csv', names = ['codbairro','nome','area','codra','cod_rp','bolsa_familia_sim','bolsa_familia_nao','faixa_renda_acima_1_5','faixa_renda_baixa_renda','faixa_renda_extrema_pobreza','faixa_renda_pobreza','extrema_pobreza_cadastrado','extrema_pobreza_sem_registro'])
-finaldados.to_csv(r'.\ref\bairro.csv', header=True, index=False)
-
-#Salva tabela Unidade_de_Saude no diretório local
-cursor.execute(fr"SELECT * FROM refined.Unidades_de_Saude INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\Unidades_de_Saude.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\Unidades_de_Saude.csv', names = ['CNES','NOME','EQUIPES','ENDERECO','BAIRRO'])
-finaldados.to_csv(r'.\ref\Unidades_de_Saude.csv', header=True, index=False)
-
-#Salva tabela CEP no diretório local
-cursor.execute(fr"SELECT * FROM refined.CEP INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\CEP.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\CEP.csv', names = ['ID','CEP'])
-finaldados.to_csv(r'.\ref\CEP.csv', header=True, index=False)
-
-#Salva a tabela Casos_de_COVID no repositório local
-cursor.execute(fr"SELECT * FROM refined.Casos_de_COVID INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\Casos_de_COVID.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\Casos_de_COVID.csv', names = ['ID','dt_notfic','dt_inicio_sintomas','dt_evolucao','EVOLUCAO_ID'])
-finaldados.to_csv(r'.\ref\Casos_de_COVID.csv', header=True, index=False)
-
-#Salva tabela evolucao no diretório local
-cursor.execute(fr"SELECT * FROM refined.evolucao INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\evolucao.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\evolucao.csv', names = ['ID','CEP'])
-finaldados.to_csv(r'.\ref\evolucao.csv', header=True, index=False)
-
-#Salva tabela Reside_Bairro_Caso_de_COVID_CEP no diretório local
-cursor.execute(fr"SELECT * FROM refined.Resida_Bairro_Caso_de_COVID_CEP INTO OUTFILE '{repr(os.getcwd())[1:-1]}\\stg\\Resida_Bairro_Caso_de_COVID_CEP.csv' FIELDS ENCLOSED BY '' TERMINATED BY ',' ESCAPED BY '' LINES TERMINATED BY '\r\n'")
-finaldados = pd.read_csv(r'.\stg\Resida_Bairro_Caso_de_COVID_CEP.csv', names = ['fk_Bairro_codbairro','fk_CEP_ID','fk_Caso_de_COVID_ID'])
-finaldados.to_csv(r'.\ref\Resida_Bairro_Caso_de_COVID_CEP.csv', header=True, index=False)
 

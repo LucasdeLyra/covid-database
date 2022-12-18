@@ -16,7 +16,6 @@ utils.create_table(r'stg\sup\CEP_dos_casos_confirmados_de_COVID-19_no_município
     True,
     r'stg\Casos.csv')
 
-
 utils.clean_xls(r'raw\ExtremaPobreza.xls', r'stg\ExtremaPobreza.csv', {'Localidade': 'object', 'Quantidade Famílias Sem Registro Civil': 'int64', 'Quantidade Famílias Cadastrado': 'int64', 'Quantidade Famílias Total': 'int64'})
 utils.clean_xls(r'raw\FaixaDeRendaPerCaptaAtualizado.xls', r'stg\FaixaDeRendaPerCaptaAtualizado.csv', {'Localidade': 'object', 'Quantidade Famílias Extrema Pobreza': 'int64', 'Quantidade Famílias Pobreza': 'int64', 'Quantidade Famílias Baixa Renda': 'int64', 'Quantidade Famílias Acima de 1/2 S.M': 'int64', 'Quantidade Famílias Total': 'int64'})
 utils.clean_xls(r'raw\BolsaFamilia.xls', r'stg\BolsaFamilia.csv', {'Localidade': 'object', 'Quantidade Famílias Sim': 'int64', 'Quantidade Famílias Não': 'int64', 'Quantidade Famílias Total': 'int64'})

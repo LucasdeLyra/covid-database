@@ -1,4 +1,4 @@
-codbairro,nome,area,codra,cod_rp,bolsa_familia_sim,bolsa_familia_nao,faixa_renda_acima_1_5,faixa_renda_baixa_renda,faixa_renda_extrema_pobreza,faixa_renda_pobreza,extrema_pobreza_cadastrado,extrema_pobreza_sem_registro
+fk_Bairro_codbairro,nome,area,fk_Regiao_Administrativa_codra,cod_rp,bolsa_familia_sim,bolsa_familia_nao,faixa_renda_acima_1_5,faixa_renda_baixa_renda,faixa_renda_extrema_pobreza,faixa_renda_pobreza,extrema_pobreza_cadastrado,extrema_pobreza_sem_registro
 1,Saúde                     ,363818,1,1.1,159,392,29,22,354,9,416,0
 2,Gamboa                    ,1112900,1,1.1,951,2,262,131,2,59,2,0
 3,Santo Cristo              ,1684720,1,1.1,931,2,259,159,2,62,2,0
